@@ -54,16 +54,24 @@ body{
 .btn{display:inline-block;padding:10px 14px;background:var(--accent-600);color:#01253a;border-radius:10px;text-decoration:none;font-weight:700}
 .btn:hover{filter:brightness(0.98)}
 
-/* smaller screens tweaks for the new grid layouts */
-@media (max-width:800px){
-  .grid{grid-template-columns:1fr}
-}
-
 /* responsive */
 @media (max-width:800px){
   .nav{display:none;flex-direction:column;background:rgba(7,16,40,0.95);position:absolute;right:16px;top:64px;padding:12px;border-radius:8px}
   .nav.show{display:flex}
   .nav-toggle{display:block}
   .container{padding:16px}
+  .hero{flex-direction:column;text-align:center}
   .hero h1{font-size:1.8rem}
+  .profile-img{width:150px;height:150px;margin-top:2rem}
+  .section{padding:32px 0}
+  .grid{grid-template-columns:1fr}
+}
+
+@media (max-width:480px){
+  .hero h1{font-size:1.5rem}
+  .lead{font-size:0.9rem}
+  .cta{margin:0 4px}
+  .grid{gap:12px}
+  .card{padding:14px}
+  .section h2{font-size:1.5rem}
 }
